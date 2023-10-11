@@ -1,56 +1,67 @@
-*{
-    box-sizing: border-box;
-}
-
-/* Je fais un reset des marges */
 body{
-    margin: 0;
 }
 
-header img{
-    width: 100%; 
-}
-main section{
-    padding: 8;             /* De sorte à décoller les sections */
-}
-
-/* Je mets en footer */
 footer{
-    background-color: black;
-    text-align: center;
-    color: white;
+    flex-shrink: 0;     /* Propriété qui permet d'utiliser l'espace restant par rapport à ce qu'il y a au dessus. Si la taille de l'ensemble des éléments flexibles est supérieure à la taille du conteneur, les éléments seront comprimés */
+    border-top: 1px dashed black;
+    background: #02011e;
+    color: #333;
 }
 
-@media screen and (min-width:600px){
-    main{
-        display: flex;           /* Mes sections se mettent côte à côte */
-        flex-wrap: wrap;        /* Ca veut dire que, dès qu'il atteint 600px, il met les sections côte à côte s'il y a de la place */
-    }
-    main section{
-        flex: 1;
-        min-width: 45%;         /* La largeur minimale représente 45% de la largeur maximale */
-        margin: 10px;           /* On aurait également pu utiliser gap : x pax; */
-        padding: 10px;
-        border:1px solid green;
-    }
+img{
+    width: 20px;
 }
 
-@media screen and (min-width: 800px) {
-    header img{
-        height: 100vh;
-        object-fit: cover;      /* Pour éviter de déformer l'image lors de l'élargissement de la page */
-    }
-    main{
-        width: 780px;
-        margin: auto;
-    }
+.contenu-footer{
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 20px;
+    padding: 50px 0 100px;
 }
 
-@media screen and (min-width: 1200px) {
-    main{
-        width: 1180px;
-    }
-    main section{
-        min-width: 25%;
-    }
+.bloc{
+    width: 25%;
+    margin: 0 30px;
 }
+
+
+/* Les contacts */
+.footer-contact h3,
+.footer-services h3,
+.footer-horaires h3,
+.footer-medias h3{
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+
+.footer-contact p{
+    padding: 5px;
+}
+
+
+/* Les services */
+.liste-services,
+.liste_horaires,
+.liste-medias{
+    list-style-type: none;
+}
+
+.liste-services li{
+    padding: 2px 0;
+}
+
+.liste-services li a{
+    text-decoration: none;
+    color: #333;
+}
+
+.liste-services a:hover{
+    text-decoration: none;
+    color: rgb(3, 3, 3)
+}
+
+/* Les médias */
+.liste-
